@@ -30,7 +30,7 @@ int main() {
         printf("\nSize ");
         scanf("%d", &n);
         
-        run(func_ptr[option-1], n);
+        run(func_ptr[option-1], n); 
 
     }    
     while (0){
