@@ -19,8 +19,8 @@ int main() {
         printf("\t%d: Quit\n", option++);
         printf("\t%d: Calculating the number of occurrences of a digit in an array\n", option++);
         printf("\t%d: Matrix sum\n", option++);
-        printf("\t%d: Infix display of a binary search tree\n", option++);
-        printf("\t%d: Infix display of a binary search tree (Recursive)\n", option++);
+        printf("\t%d: Inorder display of a binary search tree\n", option++);
+        printf("\t%d: Inorder display of a binary search tree (Recursive)\n", option++);
         printf("\t%d: Merge sort of an array\n\n", option++);
         scanf("%d", &option);
 
