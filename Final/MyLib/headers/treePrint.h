@@ -1,7 +1,7 @@
 #ifndef TREE_H
 #define TREE_H
 
-#include "functions.h"
+#include "../headers/functions.h" 
 
 #define MAXSIZE 100
 
@@ -15,6 +15,7 @@ struct node0{
 int stack[MAXSIZE];     
 static int top = -1;            
 
+int random(int range);
 int isEmpty();
 int isFull();
 int pop();

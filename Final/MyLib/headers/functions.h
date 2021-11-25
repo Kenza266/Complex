@@ -27,8 +27,7 @@
 
 static int count = 0;
 
-static uint64_t ns();
-
+uint64_t ns();
 void run(uint64_t (*f)(int), int n);
 int random(int range);
 

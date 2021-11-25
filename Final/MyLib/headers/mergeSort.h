@@ -1,7 +1,7 @@
 #ifndef SORT_H
 #define SORT_H
 
-#include "functions.h"
+#include "../headers/functions.h" 
 
 typedef struct node1* list;
 struct node1{
@@ -9,6 +9,7 @@ struct node1{
     list next;
 }node1;
 
+int random(int range);
 list newNode(int x);
 void clearList(list head);
 void printList(list head);
