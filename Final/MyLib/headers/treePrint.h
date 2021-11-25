@@ -13,7 +13,7 @@ struct node0{
 }node0;
 
 int stack[MAXSIZE];     
-int top = -1;            
+static int top = -1;            
 
 int isEmpty();
 int isFull();

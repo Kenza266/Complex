@@ -1,9 +1,9 @@
-#include "MyLib/headers/functions.h" 
-
 #include "MyLib/headers/treePrint.h"
 #include "MyLib/headers/occTab.h"
 #include "MyLib/headers/mergeSort.h"
 #include "MyLib/headers/matSum.h"
+
+#include "MyLib/headers/functions.h" 
 
 uint64_t (*func_ptr[5])(int n) = {occTab, matSum, treePrint, treePrintRec, mergeSort};
 
