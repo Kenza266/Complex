@@ -33,15 +33,8 @@ int main() {
         count=0;
         run(func_ptr[option-1], n); 
 
-    }    
-    while (0){
-
-        scanf("%d", &n);
-        for (int i=0; i<5; i++)
-            run(func_ptr[2], n);
-        
-    }
-
+    }   
+    
     return 0;
 
 }
