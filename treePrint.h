@@ -70,8 +70,8 @@ node add(node root, int x){
 
 void printTree(node root){
 
-    while (root || !isEmpty()){
-        while(root){
+    while (root || !isEmpty()){ 
+        while(root){ // h = log2(n)
             push((int)root);
             root = root->left;
         }

@@ -11,7 +11,7 @@ int main() {
 
     int option, n;
 
-    while (1){
+    while (0){
 
         option = 0;
 
@@ -33,11 +33,11 @@ int main() {
         run(func_ptr[option-1], n); 
 
     }    
-    while (0){
+    while (1){
 
         scanf("%d", &n);
         for (int i=0; i<5; i++)
-            run(func_ptr[3], n);
+            run(func_ptr[2], n);
         
     }
 
