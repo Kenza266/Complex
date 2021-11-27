@@ -107,7 +107,7 @@ int* treePrint(int n){
     srand(time(NULL));
 
     for(i=0; i<n; i++){
-        root = add(root, random(RANGE));
+        root = add(root, randnum(Min, Max));
     }
 
     // Print
@@ -129,7 +129,7 @@ int* treePrintRec(int n){
     srand(time(NULL));
 
     for(i=0; i<n; i++){
-        root = add(root, random(RANGE));
+        root = add(root, randnum(Min, Max));
     }
 
     // Print

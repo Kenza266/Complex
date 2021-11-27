@@ -9,7 +9,6 @@ struct node1{
     list next;
 }node1;
 
-int random(int range);
 list newNode(int x);
 void clearList(list head);
 void printList(list head);

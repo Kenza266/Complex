@@ -43,10 +43,6 @@ void run(int* (*f)(int), int n){
     uint64_t time = *ret;
     count = *(ret+1);
 
-    printf("\nN = %d, number of iterations : %d, execution time : %llu ns\n", n, count, time);
-    
-}
+    printf("\nN = %d, number of iterations is: %d, execution time is: %llu ns\n", n, count, time);
 
-int random(int range){
-    return rand() % range;
 }

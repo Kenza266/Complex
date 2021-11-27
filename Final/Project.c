@@ -15,22 +15,40 @@ int main() {
 
         option = 0;
 
-        printf("\n\nMenu :\n");
-        printf("\t%d: Quit\n", option++);
-        printf("\t%d: Calculating the number of occurrences of a digit in an array\n", option++);
-        printf("\t%d: Matrix sum\n", option++);
-        printf("\t%d: Inorder display of a binary search tree\n", option++);
-        printf("\t%d: Inorder display of a binary search tree (Recursive)\n", option++);
-        printf("\t%d: Merge sort of an array\n\n", option++);
+        printf("\n\nSelect one algorithm\n");
+        printf("%d: Quit\n", option++);
+        printf("%d: Calculating the number of occurrences of a digit in an array\n", option++);
+        printf("%d: Matrix sum\n", option++);
+        printf("%d: Inorder display of a binary search tree\n", option++);
+        printf("%d: Inorder display of a binary search tree (Recursive)\n", option++);
+        printf("%d: Merge sort of an array\n\n", option++);
+
+        printf("\nEnter algorithm number: ");
         scanf("%d", &option);
 
         if (!option) 
             break;
 
-        printf("\nSize ");
+        printf("\nEnter space size: ");
         scanf("%d", &n);
+
+        if (option == 2) 
+            printf("\nSpace size is %dx%d\n", n, n);
+        else
+            printf("\nSpace size is %d\n", n);
+        
         
         run(func_ptr[option-1], n); 
+
+        printf("Time complexity: ");
+
+        switch (option){
+            case 1: printf("O(n)"); break;
+            case 2: printf("O(n^2)"); break;
+            case 3: printf("O(n)"); break;
+            case 4: printf("O(n)"); break;
+            case 5: printf("O(n log2(n))"); break;
+        };
 
     }   
     

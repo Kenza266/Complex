@@ -29,7 +29,7 @@ list createList(int n){
     int i;
 
     for (i=0; i<n; i++){
-        tmp = newNode(random(RANGE));
+        tmp = newNode(randnum(Min, Max));
         tmp->next = head;
         head = tmp;
     }

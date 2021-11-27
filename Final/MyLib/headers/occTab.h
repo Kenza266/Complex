@@ -3,7 +3,6 @@
 
 #include "../headers/functions.h" 
 
-int random(int range);
 int* occTab(int n);
 
 #endif

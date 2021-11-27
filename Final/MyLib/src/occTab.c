@@ -5,10 +5,10 @@ int* occTab(int n){
 
     srand (time(NULL));
 
-    int T[n], i, r=0, x=random(RANGE);
+    int T[n], i, r=0, x=randnum(Min, Max);
 
     for (i=0; i<n; i++)
-        T[i] = random(RANGE);
+        T[i] = randnum(Min, Max);
 
     uint64_t time = ns();
     for (i=0; i<n; i++){

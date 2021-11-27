@@ -15,7 +15,6 @@ struct node0{
 int stack[MAXSIZE];     
 static int top = -1;            
 
-int random(int range);
 int isEmpty();
 int isFull();
 int pop();

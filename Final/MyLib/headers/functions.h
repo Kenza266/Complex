@@ -7,7 +7,9 @@
 #include <stdint.h>
 #include <time.h>
 
-#define RANGE 500
+#define Min 0
+#define Max 500
+#define randnum(min, max) ((rand() % (int)(((max) + 1) - (min))) + (min))
 
 #if defined(__linux) //select linux timer
 #define HAVE_POSIX_TIMER
@@ -29,6 +31,5 @@ int count;
 
 uint64_t ns();
 void run(int* (*f)(int), int n);
-int random(int range);
 
 #endif

@@ -8,8 +8,8 @@ int* matSum(int n){
 
     for (i=0; i<n; i++)
         for (j=0; j<n; j++){
-            A[i][j] = random(RANGE);
-            A[i][j] = random(RANGE);
+            A[i][j] = randnum(Min, Max);
+            A[i][j] = randnum(Min, Max);
         }
 
     uint64_t time = ns();
