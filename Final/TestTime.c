@@ -9,7 +9,7 @@ int* (*func_ptr[5])(int n) = {occTab, matSum, treePrint, treePrintRec, mergeSort
 
 int main() {
 
-    int option, n;
+    int option, i, n, step;
 
     while (1){
 
@@ -22,15 +22,32 @@ int main() {
         printf("\t%d: Inorder display of a binary search tree\n", option++);
         printf("\t%d: Inorder display of a binary search tree (Recursive)\n", option++);
         printf("\t%d: Merge sort of an array\n\n", option++);
+
         scanf("%d", &option);
 
         if (!option) 
             break;
 
-        printf("\nSize ");
-        scanf("%d", &n);
-        
-        run(func_ptr[option-1], n); 
+        if (option == 2){
+            n = 400; 
+            step = 50;
+        }
+        else{
+            n = 1000; 
+            step = 100;
+        }
+
+        i = 1;
+        while(i<n){
+            run(func_ptr[option-1], i); 
+            run(func_ptr[option-1], i); 
+            run(func_ptr[option-1], i);
+            run(func_ptr[option-1], i); 
+            printf("\n\n");
+            if (i==1)
+                i--;
+            i+=step;
+        }
 
     }   
     

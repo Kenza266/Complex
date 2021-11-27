@@ -73,7 +73,7 @@ list mergeList(list head1, list head2){
         return head2;
     if (!head2)
         return head1;
-
+    count++;
     if (head1->val < head2->val){
         head1->next = mergeList(head1->next, head2);
         return head1;
@@ -87,32 +87,35 @@ list mergeList(list head1, list head2){
 
 list sort(list head){
 
-    count++;
     if(!head->next)
         return head;
+    count++;
     list* ret = devideList(head);
     return mergeList(sort(*ret), sort(*(ret+1)));
 
 }
 
-uint64_t mergeSort(int n){
+int* mergeSort(int n){
 
     srand (time(NULL));
 
     list head = createList(n);
     
-    printf("\nBefore\t");
-    printList(head);
-    
-    printf("The list is now sorted\t");
-    printList(sort(head));
+    //printf("\nThe list:\t");
+    //printList(head);
 
     uint64_t time = ns();
-    sort(head);
+    head = sort(head);
     time = ns()-time;
 
-    clearList(head);
+    //printf("The list is now sorted:\t");
+    //printList(head);
 
-    return time;
+    clearList(head);
+    
+    int* ret = (int*) malloc(sizeof(int) * 2);
+    *ret = time;
+    *(ret+1) = count;
+    return ret;
 
 }

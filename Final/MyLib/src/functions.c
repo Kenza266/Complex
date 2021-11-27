@@ -36,9 +36,15 @@ uint64_t ns() {
     #endif
 }
 
-void run(uint64_t (*f)(int), int n){
-    uint64_t time = (*f)(n);
+void run(int* (*f)(int), int n){
+
+    count = 0;
+    int* ret = (*f)(n);
+    uint64_t time = *ret;
+    count = *(ret+1);
+
     printf("\nN = %d, number of iterations : %d, execution time : %llu ns\n", n, count, time);
+    
 }
 
 int random(int range){

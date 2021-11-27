@@ -1,7 +1,7 @@
 #include "../headers/functions.h"
 #include "../headers/matSum.h"
 
-uint64_t matSum(int n){
+int* matSum(int n){
 
     srand (time(NULL));
     int A[n][n], B[n][n], C[n][n], i, j;
@@ -20,6 +20,9 @@ uint64_t matSum(int n){
         }
     }
     time = ns()-time;
-    printf("The sum has been calculated\n");
-    return time;
+    //printf("The sum has been calculated\n");
+    int* ret = (int*) malloc(sizeof(int) * 2);
+    *ret = time;
+    *(ret+1) = count;
+    return ret;
 }

@@ -25,7 +25,7 @@ node createNode(int x);
 node add(node root, int x);
 void printTree(node root);
 void printTreeRec(node root);
-uint64_t treePrint(int n);
-uint64_t treePrintRec(int n);
+int* treePrint(int n);
+int* treePrintRec(int n);
 
 #endif

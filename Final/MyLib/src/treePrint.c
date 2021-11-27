@@ -67,7 +67,7 @@ void printTree(node root){
             root = root->left;
         }
         root = (node) pop();
-        printf("%d \t", root->val);
+        //printf("%d \t", root->val);
         root = root->right;
     }
     // Version 2
@@ -96,11 +96,11 @@ void printTreeRec(node root){ //O(n)
         return;
     count++;
     printTreeRec(root->left); 
-    printf("%d \t", root->val);
+    //printf("%d \t", root->val);
     printTreeRec(root->right);
 }
 
-uint64_t treePrint(int n){
+int* treePrint(int n){
     // Creation
     int i;
     node root = NULL;
@@ -115,10 +115,14 @@ uint64_t treePrint(int n){
     printTree(root);
     time = ns()-time;
     clearTree(root);
-    return time;
+
+    int* ret = (int*) malloc(sizeof(int) * 2);
+    *ret = time;
+    *(ret+1) = count;
+    return ret;
 }
 
-uint64_t treePrintRec(int n){
+int* treePrintRec(int n){
     // Creation
     int i;
     node root = NULL;
@@ -133,5 +137,9 @@ uint64_t treePrintRec(int n){
     printTreeRec(root);
     time = ns()-time;
     clearTree(root);
-    return time;
+
+    int* ret = (int*) malloc(sizeof(int) * 2);
+    *ret = time;
+    *(ret+1) = count;
+    return ret;
 }

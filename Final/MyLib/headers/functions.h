@@ -25,10 +25,10 @@
 #include <windows.h>
 #endif
 
-static int count = 0;
+int count;
 
 uint64_t ns();
-void run(uint64_t (*f)(int), int n);
+void run(int* (*f)(int), int n);
 int random(int range);
 
 #endif

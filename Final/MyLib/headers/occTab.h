@@ -4,6 +4,6 @@
 #include "../headers/functions.h" 
 
 int random(int range);
-uint64_t occTab(int n);
+int* occTab(int n);
 
 #endif

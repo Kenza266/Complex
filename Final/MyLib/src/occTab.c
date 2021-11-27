@@ -1,7 +1,7 @@
 #include "../headers/functions.h"
 #include "../headers/occTab.h"
 
-uint64_t occTab(int n){
+int* occTab(int n){
 
     srand (time(NULL));
 
@@ -17,8 +17,11 @@ uint64_t occTab(int n){
             r++;
     }
     time = ns()-time;
-    printf("\nThe value %d appeared %d times in the table\n", x, r);
+    //printf("\nThe value %d appeared %d times in the table\n", x, r);
     
-    return time;
+    int* ret = (int*) malloc(sizeof(int) * 2);
+    *ret = time;
+    *(ret+1) = count;
+    return ret;
 
 }

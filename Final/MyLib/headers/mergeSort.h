@@ -19,6 +19,6 @@ int midList(list head);
 list* devideList(list head);
 list mergeList(list head1, list head2);
 list sort(list head);
-uint64_t mergeSort(int n);
+int* mergeSort(int n);
 
 #endif
