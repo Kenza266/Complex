@@ -9,8 +9,8 @@ int isFull() {
    return top == MAXSIZE;
 }
 
-int pop() {
-   int data = 0;
+node pop() {
+   node data = NULL;
    if(!isEmpty()) {
       data = stack[top];
       top = top - 1;  
@@ -18,7 +18,7 @@ int pop() {
    return data;
 }
 
-void push(int data) {
+void push(node data) {
    if(!isFull()) {
       top = top + 1;   
       stack[top] = data;
@@ -61,12 +61,12 @@ void printTree(node root){
 
     while (root || !isEmpty()){ 
         count++;
-        while(root){ // h = Log2(n) 
+        while(root){ // h = Log2(n)
             count++;
-            push((int)root);
+            push(root);
             root = root->left;
         }
-        root = (node) pop();
+        root = pop();
         //printf("%d \t", root->val);
         root = root->right;
     }

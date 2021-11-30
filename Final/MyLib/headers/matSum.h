@@ -1,7 +1,7 @@
 #ifndef MAT_H
 #define MAT_H
 
-#include "../headers/functions.h" 
+#include "functions.h" 
 
 int* matSum(int n);
 

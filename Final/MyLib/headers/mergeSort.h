@@ -1,7 +1,7 @@
 #ifndef SORT_H
 #define SORT_H
 
-#include "../headers/functions.h" 
+#include "functions.h" 
 
 typedef struct node1* list;
 struct node1{

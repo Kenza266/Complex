@@ -1,7 +1,7 @@
 #ifndef TAB_H
 #define TAB_H
 
-#include "../headers/functions.h" 
+#include "functions.h" 
 
 int* occTab(int n);
 
