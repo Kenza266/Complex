@@ -61,7 +61,7 @@ void printTree(node root){
 
     while (root || !isEmpty()){ 
         count++;
-        while(root){ // h = Log2(n)
+        while(root){
             count++;
             push(root);
             root = root->left;
@@ -104,10 +104,11 @@ int* treePrint(int n){
     // Creation
     int i;
     node root = NULL;
+    
     srand(time(NULL));
 
     for(i=0; i<n; i++){
-        root = add(root, randnum(Min, Max));
+        root = add(root, randnum(MIN, MAX));
     }
 
     // Print
@@ -119,6 +120,7 @@ int* treePrint(int n){
     int* ret = (int*) malloc(sizeof(int) * 2);
     *ret = time;
     *(ret+1) = count;
+
     return ret;
 }
 
@@ -129,7 +131,7 @@ int* treePrintRec(int n){
     srand(time(NULL));
 
     for(i=0; i<n; i++){
-        root = add(root, randnum(Min, Max));
+        root = add(root, randnum(MIN, MAX));
     }
 
     // Print
@@ -141,5 +143,6 @@ int* treePrintRec(int n){
     int* ret = (int*) malloc(sizeof(int) * 2);
     *ret = time;
     *(ret+1) = count;
+
     return ret;
 }

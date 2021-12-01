@@ -7,8 +7,8 @@
 #include <stdint.h>
 #include <time.h>
 
-#define Min 0
-#define Max 500
+#define MIN 0
+#define MAX 500
 #define randnum(min, max) ((rand() % (int)(((max) + 1) - (min))) + (min))
 
 #if defined(__linux) //select linux timer

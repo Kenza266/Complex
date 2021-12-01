@@ -15,7 +15,7 @@ void printList(list head);
 list createList(int n);
 int lengthList(list head);
 int midList(list head);
-list* devideList(list head);
+list* divideList(list head);
 list mergeList(list head1, list head2);
 list sort(list head);
 int* mergeSort(int n);

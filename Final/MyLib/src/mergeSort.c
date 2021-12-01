@@ -29,7 +29,7 @@ list createList(int n){
     int i;
 
     for (i=0; i<n; i++){
-        tmp = newNode(randnum(Min, Max));
+        tmp = newNode(randnum(MIN, MAX));
         tmp->next = head;
         head = tmp;
     }
@@ -47,7 +47,7 @@ int midList(list head){
     return (int)ceil((float)lengthList(head)/2);
 }
 
-list* devideList(list head){
+list* divideList(list head){
     
     if (!head)
         return NULL;
@@ -90,7 +90,7 @@ list sort(list head){
     if(!head->next)
         return head;
     count++;
-    list* ret = devideList(head);
+    list* ret = divideList(head);
     return mergeList(sort(*ret), sort(*(ret+1)));
 
 }
@@ -116,6 +116,6 @@ int* mergeSort(int n){
     int* ret = (int*) malloc(sizeof(int) * 2);
     *ret = time;
     *(ret+1) = count;
-    return ret;
 
+    return ret;
 }
