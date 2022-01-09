@@ -19,7 +19,7 @@
 #endif
 
 #define DISKS 50 // Max number of disks
-#define t 3 // Max number of towers
+#define t 3 // Number of towers
 
 int towers[DISKS][t];
 int i, j, disks;
@@ -36,3 +36,4 @@ void move(int disk, int source, int destination); // Moving the disk from one to
 void hanoifun(int n, int source, int destination, int spare); // Solve the game
 
 int verify(int source, int destination); // Verification algorithm
+void print_report();

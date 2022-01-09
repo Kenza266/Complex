@@ -2,14 +2,27 @@
  
 int main()
 {
-    disks = 4;
+    printf("Please enter the size of the problem: ");
+    scanf("%d", &disks);
+    while (disks<=0){
+        printf("The size must be positive, try again: ");
+        scanf("%d", &disks);
+    }
     create();
     printf("The matrix:\n");
     print();
+    int source=0, destination=2, aux=1;
     time = ns();
-    hanoifun(disks, 0, 2, 1); // Source, Destination, Auxilary
+    hanoifun(disks, source, destination, aux); // Source, Destination, Auxilary
     time = ns()-time;
-    time /=1000000;
-    printf("With %d disks, the execution time: %llums \n", disks, time);
+    time *=1e-6; // Convert from ns to ms
+
+    print_report();
+    printf("\nExecuting the verification algorithm...\n\n");
+
+    if (verify(source, destination))
+        printf("Task finished succesfully");
+    else 
+        printf("Error");
     return 0;
 }

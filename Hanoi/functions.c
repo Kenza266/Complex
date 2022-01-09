@@ -77,25 +77,29 @@ int first_zero(int tower){
 void move(int disk, int source, int destination){
     towers[get_location(disk, source)][source] = 0;
     towers[first_zero(destination)][destination] = disk;
-    //printf("Step %d: Move disk %d from tower %d to tower %d\n", step++, disk, source, destination);
+    printf("Step %d: Move disk %d from tower %d to tower %d\n", step++, disk, source, destination);
 }
 
 void hanoifun(int d, int source, int destination, int spare){
     if (d == 1){
         move(1, source, destination);
-        //print();
+        print();
         return;
     }
     hanoifun(d-1, source, spare, destination);
     move(d, source, destination);
-    //print();
+    print();
     hanoifun(d-1, spare, destination, source);
 }
 
-int verify(int source, int destination){
+int verify(int source, int destination){ 
     for(i=DISKS-disks; i<DISKS; i++)
         if (towers[i][source] !=0 ||
             towers[i][destination] != disks-DISKS+i+1)
             return 0;
     return 1;
+}
+
+void print_report(){
+     printf("Size: %d disks\nSteps needed: %d steps\nExecution time: %llums\n", disks, step-1, time);
 }
